@@ -1,0 +1,56 @@
+alert example
+
+
+ok event
+
+{
+   "Records":[
+      {
+         "EventSource":"aws:sns",
+         "EventVersion":"1.0",
+         "EventSubscriptionArn":"*",
+         "Sns":{
+            "Type":"Notification",
+            "MessageId":"69b43058-bad7-503b-b0b2-6818bd5a2252",
+            "TopicArn":"*",
+            "Subject":"OK: \"[Critical] Conversion stay lower than the expected number for a certain...\" in US West (Oregon)",
+            "Message":"{\"AlarmName\":\"[Critical] Conversion stay lower than the expected number for a certain period\",\"AlarmDescription\":\"{\\n    \\\"alert_source\\\":\\\"cloudwatch ML\\\",\\n    \\\"element\\\":\\\"conversion\\\",\\n    \\\"element_type\\\":\\\"business\\\",\\n    \\\"element_subtype\\\":\\\"conversion\\\",\\n    \\\"host\\\":\\\"\\\",\\n    \\\"issue\\\":\\\"Conversion stay lower than the expected number for a certain period\\\",\\n    \\\"site\\\":\\\"Teechip\\\",\\n    \\\"description\\\":\\\"Conversion lower than 3 for more than 100 minutes, please contact DevOps/SRE for investigation\\\",\\n    \\\"severity\\\":\\\"critical\\\",\\n    \\\"processing_state\\\":\\\"\\\",\\n    \\\"server_owner\\\":null,\\n    \\\"service_owner\\\":\\\"SRE\\\"\\n}\",\"NewStateValue\":\"OK\",\"NewStateReason\":\"Threshold Crossed: 3 out of the last 3 datapoints [6.5 (01/12/20 08:51:00), 7.2 (01/12/20 08:46:00), 3.8 (01/12/20 08:41:00)] were not less than or equal to the threshold (3.0) (minimum 1 datapoint for ALARM -> OK transition).\",\"StateChangeTime\":\"2020-12-01T08:56:45.570+0000\",\"Region\":\"US West (Oregon)\",\"AlarmArn\":\"arn:aws:cloudwatch:us-west-2:479335881964:alarm:[Critical] Conversion stay lower than the expected number for a certain period\",\"OldStateValue\":\"ALARM\",\"Trigger\":{\"MetricName\":\"Conversion\",\"Namespace\":\"teechip\",\"StatisticType\":\"Statistic\",\"Statistic\":\"AVERAGE\",\"Unit\":null,\"Dimensions\":[{\"value\":\"all\",\"name\":\"conversion\"}],\"Period\":300,\"EvaluationPeriods\":3,\"ComparisonOperator\":\"LessThanOrEqualToThreshold\",\"Threshold\":3.0,\"TreatMissingData\":\"- TreatMissingData:                    breaching\",\"EvaluateLowSampleCountPercentile\":\"\"}}",
+            "Timestamp":"2020-12-01T08:56:45.618Z",
+            "SignatureVersion":"1",
+            "Signature":"FfdKE662kB1LfkuXP5N67aqzHMpYHgTdGZVDzB9zo2Ec/rd67q58XFhdkcn2OAy9EetLs7haLpvZJKzjDFWS/jI8QLpk8Dmc9PrAGn7tv7MsoXuuVVAUgNx4QtKW+94xiRFrrE15mkGqP8M1jlGqBpyh7uEhTM8cIyYBaG47Gb5ilNSSPPAWju0BAwZYUVjqT/c6CRiH0lIZh9PdhDvxz5o25kruHCydJ+49iGbBg8RZJCUHO7cPqlekve1wsTQmYnW7HCZz48a0+FdszaIDtbVMSnPLITMgCXSdbvg1LAXnR5fiwuz2YHQwQRt4het3HG0WuGULqMbTqbIHfGX+Xg==",
+            "SigningCertUrl":"https://sns.us-west-2.amazonaws.com/SimpleNotificationService-010a507c1833636cd94bdb98bd93083a.pem"
+            "MessageAttributes":{
+               
+            }
+         }
+      }
+   ]
+}
+
+
+critical event
+
+
+{
+   "Records":[
+      {
+         "EventSource":"aws:sns",
+         "EventVersion":"1.0",
+         "EventSubscriptionArn":"*",
+         "Sns":{
+            "Type":"Notification",
+            "MessageId":"9ce98363-854b-5e2b-a507-db23894ab69f",
+            "TopicArn":"arn:aws:sns:us-west-2:479335881964:CloudWatch-to-Slack",
+            "Subject":"ALARM: \"[Critical] *...\" in US West (Oregon)",
+            "Message":"{\"AlarmName\":\"[Critical]  stay lower than the expected number for a certain period\",\"AlarmDescription\":\"{\\n    \\\"alert_source\\\":\\\"cloudwatch ML\\\",\\n    \\\"element\\\":\\\"conversion\\\",\\n    \\\"element_type\\\":\\\"business\\\",\\n    \\\"element_subtype\\\":\\\"conversion\\\",\\n    \\\"host\\\":\\\"\\\",\\n    \\\"issue\\\":\\\"Conversion stay lower than the expected number for a certain period\\\",\\n    \\\"site\\\":\\\"Teechip\\\",\\n    \\\"description\\\":\\\"Conversion lower than 3 for more than 100 minutes, please contact DevOps/SRE for investigation\\\",\\n    \\\"severity\\\":\\\"critical\\\",\\n    \\\"processing_state\\\":\\\"\\\",\\n    \\\"server_owner\\\":null,\\n    \\\"service_owner\\\":\\\"SRE\\\"\\n}\",\"NewStateValue\":\"ALARM\",\"NewStateReason\":\"Threshold Crossed: 3 out of the last 3 datapoints [7.0 (01/12/20 09:10:00), 5.6 (01/12/20 09:05:00), 6.4 (01/12/20 09:00:00)] were less than or equal to the threshold (30.0) (minimum 3 datapoints for OK -> ALARM transition).\",\"StateChangeTime\":\"2020-12-01T09:15:44.967+0000\",\"Region\":\"US West (Oregon)\",\"AlarmArn\":\"arn:aws:cloudwatch:us-west-2:479335881964:alarm:[Critical] Conversion stay lower than the expected number for a certain period\",\"OldStateValue\":\"OK\",\"Trigger\":{\"MetricName\":\"Conversion\",\"Namespace\":\"teechip\",\"StatisticType\":\"Statistic\",\"Statistic\":\"AVERAGE\",\"Unit\":null,\"Dimensions\":[{\"value\":\"all\",\"name\":\"conversion\"}],\"Period\":300,\"EvaluationPeriods\":3,\"ComparisonOperator\":\"LessThanOrEqualToThreshold\",\"Threshold\":30.0,\"TreatMissingData\":\"- TreatMissingData:                    breaching\",\"EvaluateLowSampleCountPercentile\":\"\"}}",
+            "Timestamp":"2020-12-01T09:15:45.013Z",
+            "SignatureVersion":"1",
+            "Signature":"kOPImhUZqNmVlOMt5txYKYx7Vcylcc5iSrF8ybdS83t4IspO0Nj0VghoBQ3bbk0lthLKLhkEeSWq48SZ4b9pwtXZnoAKxEF6qS10i0znRO8v97SkitVx7TnTcFrKROQ5/7HKb6AVcIAZhspTY92oqZ81WjdymWg7Ii4wamwvOvF0XUzv6UdN9Inuv2pZaL9Szql6LnJHOw/RD7OJ7yODep8NfSnkMl4vJ7Uvtgy9u2S1Xta1w53nDmK6I2Z67qZg4DjTDr5zwmmaiFiwlfc4Nwr+RgRZPOIKyouIXMjLCT2ktz+Eq6fXn4JjQflbBs06qifu1pgcWTFTurANC9Epqw==",
+            "SigningCertUrl":"https://sns.us-west-2.amazonaws.com/SimpleNotificationService-010a507c1833636cd94bdb98bd93083a.pem",
+            "MessageAttributes":{
+               
+            }
+         }
+      }
+   ]
+}
